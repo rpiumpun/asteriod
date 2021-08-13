@@ -8,8 +8,7 @@ let human: game.LedSprite = null
 let rand = randint(0, 4)
 human = game.createSprite(0, 2)
 let gameover = false
+let rock: number[] = []
 basic.forever(function () {
-    if (gameover) {
-        basic.showString("Game Over!")
-    }
+	
 })
