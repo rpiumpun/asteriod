@@ -18,3 +18,12 @@ for (let index = 0; index <= 4; index++) {
         rock.push(game.createSprite(2, rockY[index]))
     }
 }
+basic.forever(function () {
+    while (rock.length > 0 && rock[0].get(LedSpriteProperty.X) == 0) {
+        rock.removeAt(0).delete()
+    }
+    for (let rock2 of rock) {
+        rock2.change(LedSpriteProperty.X, -1)
+    }
+    basic.pause(1000)
+})
